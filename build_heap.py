@@ -27,19 +27,17 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
     # input from keyboard
-    text = input()
-    
-    if "I" in text:
+    filename = input()
+    if "I" in filename:
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
-    elif "F" in text:
-        f = input()
-        test ='./tests/'
-        file = test+f
-        with open(file, 'r') as f:
-            n = int(f.readline())
-            data = list(map(int, f.readline().split()))
+    elif "F" in filename:
+        test_dir = './tests/'
+        filepath = test_dir + filename
+        with open(filepath, 'r') as file_obj:
+            n = int(file_obj.readline())
+            data = list(map(int, file_obj.readline().split()))
             assert len(data) == n
     else:
         print("Invalid input. Please enter I or F")
