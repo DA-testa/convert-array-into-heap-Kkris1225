@@ -4,7 +4,7 @@
 def build_heap(data):
     n = len(data)
     swaps = []
-    for i in range(n // 2 -1):
+    for i in range(n // 2, -1, -1):
         j = i
         while True:
             l = 2 * j + 1
