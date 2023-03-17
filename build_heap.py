@@ -27,22 +27,22 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
     # input from keyboard
-text = input("I or F:")
-    if "I" in text:
-        n = int(input())
-        data = list(map(int, input().split()))
-        assert len(data) == n
-    elif "F" in text:
-        f = input()
-        test ='./tests/'
-        file = test+f
-        with open(file, 'r') as f:
-            n = int(f.readline())
-            data = list(map(int, f.readline().split()))
+    text = input("I or F:")
+        if "I" in text:
+            n = int(input())
+            data = list(map(int, input().split()))
             assert len(data) == n
-    else:
-        print("Invalid input. Please enter I or F")
-        return
+        elif "F" in text:
+            f = input()
+            test ='./tests/'
+            file = test+f
+            with open(file, 'r') as f:
+                n = int(f.readline())
+                data = list(map(int, f.readline().split()))
+                assert len(data) == n
+        else:
+            print("Invalid input. Please enter I or F")
+            return
 
  
     # checks if lenght of data is the same as the said lenght
