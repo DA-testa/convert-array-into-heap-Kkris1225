@@ -39,7 +39,7 @@ def main():
         file = test+f
         with open(file, 'r') as f:
             n = int(f.readline())
-            data = list(map(int, f.readline().split())
+            data = list(map(int, f.readline().split()))
                 assert len(data) == n
     else:
         print("Invalid input. Please enter I or F")
