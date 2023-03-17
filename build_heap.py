@@ -8,7 +8,7 @@ def build_heap(data):
         j = i
         while True:
             l = 2 * j + 1
-            r = 2 * j + 2
+            r = 2 * j + 1
             if l < n and data[l] < data[j]:
                 j = l
             elif r < n and data[r] < data[j]:
