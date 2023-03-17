@@ -40,7 +40,7 @@ def main():
         with open(file, 'r') as f:
             n = int(f.readline())
             data = list(map(int, f.readline().split()))
-                assert len(data) == n
+            assert len(data) == n
     else:
         print("Invalid input. Please enter I or F")
         return
@@ -60,9 +60,9 @@ def main():
     # output all swaps
     print(len(swaps))
     for i, j in swaps:
-        
         print(i, j)
 
 
 if __name__ == "__main__":
     main()
+
