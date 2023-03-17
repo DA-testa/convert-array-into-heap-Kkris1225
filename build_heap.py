@@ -27,7 +27,7 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
     # input from keyboard
-    text = input("I or F:")
+    text = input()
     
     if "I" in text:
         n = int(input())
