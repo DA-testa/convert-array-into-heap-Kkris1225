@@ -4,20 +4,21 @@
 def build_heap(data):
     n = len(data)
     swaps = []
-    for i in range(int((len(data)//2)-1), -1, -1):
+    for i in range(n//2-1, -1, -1):
         j = i
         while True:
             l = 2 * j + 1
             r = 2 * j + 2
             if l < n and data[l] < data[j]:
                 j = l
-            elif r < n and data[r] < data[j]:
+            if r < n and data[r] < data[j]:
                 j = r
+            if i != j:
+                swaps.append((i, j))
+                data[i], data[j] = data[j], data[i]
+                i=j
             else:
                 break
-        if i != j:
-            swaps.append((i, j))
-            data[i], data[j] = data[j], data[i]
     return swaps
 
 
